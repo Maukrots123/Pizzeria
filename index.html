@@ -433,66 +433,92 @@
                     Realizar Pedido
                 </button>
 
-                <div id="resultadoRuta" class="mt-4 p-3 bg-dark text-white rounded" style="display:none;">
-                    <h5>Información de tu Entrega:</h5>
-                    <p>El tiempo estimado para su entrega es de: <span id="tiempoTotal"></span> minutos.</p>
-                    <p>El recorrido será a través de: <span id="rutaDetalle"></span></p>
+                <div id="resultadoRuta" class="mt-4 p-3 rounded text-white" style="display:none; border: 1px solid #dee2e6;width: 120%;">
+                    <h5 class="blanco">Información de tu Entrega:</h5>
+                    <p class="blanco">El tiempo estimado para su entrega es de: <span id="tiempoTotal"></span> minutos.</p>
+                    <p class="blanco">El recorrido será a través de: <span id="rutaDetalle"></span></p>
                     <div id="mensajeErrorRuta" class="alert alert-danger mt-3" style="display:none;"></div>
-                </div>
-                
                 </div>
 
         </div>
     </div>
 </section>
 
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="row">
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                <em class="text-white d-block mb-3 fs-4 fw-bold">PizzaGo</em>
+                <p class="text-white">Tu destino para las pizzas más deliciosas y entregas rápidas en Ciudad Guayana.</p>
+            </div>
 
-                    <div class="col-lg-4 col-12 me-auto">
-                        <em class="text-white d-block mb-4">Encuéntranos</em>
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                <em class="text-white d-block mb-3 fs-5 fw-bold">Navegación Rápida</em>
+                <ul class="site-footer-links">
+                    <li class="site-footer-link-item">
+                        <a href="#section_1" class="site-footer-link">Inicio</a>
+                    </li>
+                    <li class="site-footer-link-item">
+                        <a href="#section_3" class="site-footer-link">Menú</a>
+                    </li>
+                    <li class="site-footer-link-item">
+                        <a href="#section_5" class="site-footer-link">Pedido & Contacto</a>
+                    </li>
+                    <li class="site-footer-link-item">
+                        <a href="#section_2" class="site-footer-link">Nuestra Historia</a>
+                    </li>
+                </ul>
+            </div>
 
-                        <strong class="text-white">
-                            <i class="bi-geo-alt me-2"></i>
-                            Dirección de tu Pizzería, Ciudad Guayana, Puerto Ordaz, Edo Bolivar
-                        </strong>
+            <div class="col-lg-3 col-12 mb-4 mb-lg-0">
+                <em class="text-white d-block mb-3 fs-5 fw-bold">Horario de Atención</em>
+                <p class="text-white mb-1">Lunes a Viernes: 11:00 AM - 10:00 PM</p>
+                <p class="text-white mb-1">Sábados y Domingos: 12:00 PM - 11:00 PM</p>
+                <p class="text-white mt-3">
+                    <i class="bi-clock me-2"></i>
+                    Siempre listos para tu pedido!
+                </p>
+            </div>
 
-                        <ul class="social-icon mt-4">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-facebook"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter"></a>
-                            </li>
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="col-lg-3 col-12">
+                <em class="text-white d-block mb-3 fs-5 fw-bold">Síguenos</em>
+                <ul class="social-icon">
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-facebook"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="https://x.com/minthu" target="_new" class="social-icon-link bi-twitter"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-whatsapp"></a>
+                    </li>
+                    <li class="social-icon-item">
+                        <a href="#" class="social-icon-link bi-instagram"></a>
+                    </li>
+                </ul>
+                <strong class="text-white mt-4 d-block">
+                    <i class="bi-geo-alt me-2"></i>
+                    Av. Atlántico, Puerto Ordaz, Bolívar, Venezuela
+                </strong>
+            </div>
 
-                    <div class="col-lg-3 col-12 mt-4 mb-3 mt-lg-0 mb-lg-0">
-                        <em class="text-white d-block mb-4">Contacto</em>
+        </div>
+    </div>
 
-                        <p class="d-flex mb-1">
-                            <strong class="me-2">Teléfono:</strong>
-                            <a href="tel: 123-456-7890" class="site-footer-link">
-                                (123) 456-7890
-                            </a>
-                        </p>
-
-                        <p class="d-flex">
-                            <strong class="me-2">Email:</strong>
-                            <a href="mailto:pizzago@gmail.com" class="site-footer-link">
-                                pizzago@gmail.com
-                            </a>
-                        </p>
-                    </div>
-
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12 text-center text-lg-start">
+                    <p class="copyright-text">Copyright © 2024 PizzaGo. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-lg-4 col-12 text-center text-lg-end">
+                    <p class="copyright-text">Diseñado por <a href="#" target="_blank" class="text-white">Mauricio A.</a></p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </div>
+</footer>
     </main>
     
     <script src="js/jquery.min.js"></script>
