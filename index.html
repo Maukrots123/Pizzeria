@@ -84,8 +84,13 @@
             <div class="hero-slides"></div>
         </section>
 
+            <div style="margin-top:-1px;overflow:hidden;line-height:0;">
+                  <svg viewBox="0 0 1440 80" width="100%" height="80" preserveAspectRatio="none">
+                       <path d="M0,80 C480,0 960,160 1440,80 L1440,0 L0,0 Z" fill="#680000"></path>
+                  </svg>
+            </div>
         
-
+              
         <section class="about-section section-padding" id="section_2">
             <div class="section-overlay"></div>
             <div class="container">
@@ -250,7 +255,7 @@
             </div>
         </section>
 
-        <!-- Al final de .menu-section, antes de .reviews-section -->
+      
        <div style="margin-top:-1px;overflow:hidden;line-height:0;">
           <svg viewBox="0 0 1440 80" width="100%" height="80" preserveAspectRatio="none">
              <path d="M0,80 C480,0 960,160 1440,80 L1440,0 L0,0 Z" fill="#680000"></path>
@@ -361,44 +366,85 @@
        </div>
 
         <section class="contact-section section-padding" id="section_5">
-            <div class="container">
-                <div class="row">
+    <div class="container">
+        <div class="row">
 
-                    <div class="col-lg-12 col-12">
-                        <em class="text-white">Contáctanos para tu Pedido</em>
-                        <h2 class="text-white mb-4 pb-lg-2">Pedir Ahora</h2>
-                    </div>
-
-                    <div class="col-lg-6 col-12">
-                        <form action="#" method="post" class="custom-form contact-form" role="form">
-                            <div class="row">
-                                <div class="col-lg-6 col-12">
-                                    <label for="name" class="form-label">Nombre <sup class="text-danger">*</sup></label>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Juan Pérez" required="">
-                                </div>
-                                <div class="col-lg-6 col-12">
-                                    <label for="phone" class="form-label">Teléfono</label>
-                                    <input type="tel" name="phone" id="phone" class="form-control" placeholder="0414-999 999" required="">
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <label for="address" class="form-label">Dirección de Entrega <sup class="text-danger">*</sup></label>
-                                    <input type="text" name="address" id="address" class="form-control" placeholder="Calle Falsa 123, Ciudad" required="">
-                                </div>
-                                <div class="col-12 mt-3">
-                                    <label for="message" class="form-label">Detalles del Pedido</label>
-                                    <textarea name="message" rows="4" class="form-control" id="message" placeholder="¿Algún ingrediente extra? ¿Comentarios especiales?"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-5 col-12 mx-auto mt-3">
-                                <button type="submit" class="form-control">Realizar Pedido</button>
-                            </div>
-                        </form>
-                    </div>
-
-                    
-                </div>
+            <div class="col-lg-12 col-12">
+                <em class="text-white">Realiza tu Pedido a Domicilio</em>
+                <h2 class="text-white mb-4 pb-lg-2">Pedir Ahora y Recibir en Casa</h2>
             </div>
-        </section>
+
+            <div class="col-lg-6 col-12">
+                <h4 class="text-white mb-3">Información del Cliente y Pedido</h4>
+                <form action="#" method="post" class="custom-form contact-form" role="form" id="pedidoForm">
+                    <div class="row">
+                        <div class="col-lg-6 col-12">
+                            <label for="name" class="form-label">Nombre Completo <sup class="text-danger">*</sup></label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Juan Pérez" required>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <label for="phone" class="form-label">Teléfono <sup class="text-danger">*</sup></label>
+                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="0414-999 999" required>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="address" class="form-label">Dirección de Entrega <sup class="text-danger">*</sup></label>
+                            <input type="text" name="address" id="address" class="form-control" placeholder="Calle Falsa 123, Urb. Los Pinos" required>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="producto" class="form-label">¿Qué deseas ordenar? <sup class="text-danger">*</sup></label>
+                            <select class="form-select" id="producto" aria-label="Producto a ordenar" required>
+                                <option value="" selected disabled>Selecciona un producto...</option>
+                                <option value="Pizza Grande Margheritta" data-price="15.00">Pizza Grande Margheritta - $15.00</option>
+                                <option value="Pizza Familiar Pepperoni" data-price="20.00">Pizza Familiar Pepperoni - $20.00</option>
+                                <option value="Combo 2 Pizzas Medianas" data-price="25.00">Combo 2 Pizzas Medianas - $25.00</option>
+                                <option value="Lasagna Individual" data-price="12.50">Lasagna Individual - $12.50</option>
+                                </select>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="precioOrden" class="form-label">Precio de tu Orden:</label>
+                            <input type="text" id="precioOrden" class="form-control" value="$0.00" readonly>
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <label for="message" class="form-label">Notas Adicionales</label>
+                            <textarea name="message" rows="4" class="form-control" id="message" placeholder="Sin cebolla, extra queso, etc."></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-6 col-12 mt-4 mt-lg-0">
+                <h4 class="text-white mb-3">Detalles de Envío y Ruta</h4>
+                <div class="mb-3">
+                    <label for="origen" class="form-label text-white">Sucursal de Origen <sup class="text-danger">*</sup>:</label>
+                    <select class="form-select" id="origen" aria-label="Origen del pedido" required>
+                        <option value="" selected disabled>Selecciona la sucursal...</option>
+                        </select>
+                </div>
+                <div class="mb-3">
+                    <label for="destino" class="form-label text-white">Zona de Entrega <sup class="text-danger">*</sup>:</label>
+                    <select class="form-select" id="destino" aria-label="Destino del pedido" required>
+                        <option value="" selected disabled>Selecciona tu zona...</option>
+                        </select>
+                </div>
+
+                <button type="submit" class="btn custom-btn custom-border-btn mt-3" id="realizarPedidoBtn" form="pedidoForm">
+                    Realizar Pedido
+                </button>
+
+                <div id="resultadoRuta" class="mt-4 p-3 bg-dark text-white rounded" style="display:none;">
+                    <h5>Información de tu Entrega:</h5>
+                    <p>El tiempo estimado para su entrega es de: <span id="tiempoTotal"></span> minutos.</p>
+                    <p>El recorrido será a través de: <span id="rutaDetalle"></span></p>
+                    <div id="mensajeErrorRuta" class="alert alert-danger mt-3" style="display:none;"></div>
+                </div>
+                
+                </div>
+
+        </div>
+    </div>
+</section>
 
 
         <footer class="site-footer">
@@ -454,6 +500,9 @@
     <script src="js/jquery.sticky.js"></script>
     <script src="js/vegas.min.js"></script>
     <script src="js/custom.js"></script>
+
+
+    <script src="js/route.js"></script>
 
 </body>
 
